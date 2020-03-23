@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gigme.xclaim">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gigme.xclaim"
+    tools:ignore="GoogleAppIndexingWarning">
+    <!--" need to double check what the warning which i remove by the tools ignore appindexwar does" -->
+
+    <uses-permission android:name="android.pemsission.CAMERA"/>
+
+
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES"
+            android:value="ocr"/>
+
+
     </application>
 
 </manifest>
